@@ -6,9 +6,9 @@ const CourseController = {
     
     async createCourse(req, res) {
         try {
-            const { title, description, thumbnail } = req.body;
+            const { title, description } = req.body;
 
-            const newCourse = new Course({ title, description, thumbnail });
+            const newCourse = new Course({ title, description });
 
             const savedCourse = await newCourse.save();
 
